@@ -1,0 +1,28 @@
+{
+  "name": "boot-chain",
+  "version": "1.0.0",
+  "description": "Chain based service boot library",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && cp package.json dist",
+    "test": "jest test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OliverHGray/boot-chain.git"
+  },
+  "author": "Oliver Gray",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OliverHGray/boot-chain/issues"
+  },
+  "homepage": "https://github.com/OliverHGray/boot-chain#readme",
+  "dependencies": {
+    "@google-cloud/secret-manager": "^3.4.0"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.1",
+    "typescript": "^4.1.5"
+  }
+}
