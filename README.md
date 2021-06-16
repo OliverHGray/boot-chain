@@ -35,8 +35,7 @@ export const boot = bootChain(
         fn: async ({ config }) => ({
             config: await object({
                 MONGODB_URI: string().defined(),
-                SPOTIFY_ID: string().defined(),
-                SPOTIFY_SECRET: string().defined(),
+                CONFIG_EXAMPLE: string().defined(),
                 PORT: number().default(3000).defined(),
             })
                 .defined()
@@ -69,9 +68,8 @@ export const boot = bootChain(
         description: 'Creating application',
         fn: async ({ config }) => ({
             app: createApp({
-                spotifyCredentials: {
-                    id: config.SPOTIFY_ID,
-                    secret: config.SPOTIFY_SECRET,
+                config: {
+                    example: config.CONFIG_EXAMPLE,
                 },
             }),
         }),
